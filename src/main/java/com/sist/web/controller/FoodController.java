@@ -49,7 +49,7 @@ public class FoodController {
 	{
 		FoodEntity vo=fService.FoodDetailData(fno);
 		model.addAttribute("vo",vo);
-		model.addAttribute("main_html", "main/detail");
+		model.addAttribute("main_html", "food/detail");
 		return "detail";
 	}
 }
