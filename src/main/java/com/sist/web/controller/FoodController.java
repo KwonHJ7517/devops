@@ -40,7 +40,8 @@ public class FoodController {
 		model.addAttribute("totalpage",totalpage);
 		model.addAttribute("startPage",startPage);
 		model.addAttribute("endPage",endPage);
-		return "index";
+		model.addAttribute("main_html", "main/home");
+		return "";
 	}
 	
 	@GetMapping("/detail")
@@ -48,6 +49,7 @@ public class FoodController {
 	{
 		FoodEntity vo=fService.FoodDetailData(fno);
 		model.addAttribute("vo",vo);
+		model.addAttribute("main_html", "main/detail");
 		return "detail";
 	}
 }
